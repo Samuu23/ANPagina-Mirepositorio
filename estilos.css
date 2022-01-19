@@ -3,8 +3,9 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: "Poppins", sans-serif;
-  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 /* Estructura Principal -- INICIO */
@@ -16,22 +17,29 @@ body {
 header {
   width: 100%;
   height: 28vh;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f5f3f3), to(#cecece));
   background-image: linear-gradient(#f5f3f3, #cecece);
   border-bottom: 3px solid #1a7c06;
 }
+
 header h2 {
   color: #080880;
   text-shadow: 2px 2px rgba(17, 17, 226, 0.336);
 }
+
 header .encabezado {
   width: 100%;
   height: 70%;
+  display: -ms-grid;
   display: grid;
   padding: 1px;
   gap: 0.5%;
-  grid-template-columns: 20% 80%;
-  grid-template-rows: 1fr;
+  -ms-grid-columns: 20% 80%;
+      grid-template-columns: 20% 80%;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
 }
+
 header .HTLogo {
   width: 100%;
   height: 95%;
@@ -42,24 +50,33 @@ header .HTLogo {
   background-repeat: no-repeat;
   background-position: center;
 }
+
 header .HMenu {
   width: 100%;
   height: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 header .HMenu ul li {
   display: inline-block;
   font-size: 3vh;
   margin: 5px;
   width: 25vh;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border-radius: 10px;
   text-align: center;
-  box-shadow: inset 0 0 0 0 #05058f;
+  -webkit-box-shadow: inset 0 0 0 0 #05058f;
+          box-shadow: inset 0 0 0 0 #05058f;
+  -webkit-transition: ease-out 0.5s;
   transition: ease-out 0.5s;
   outline: none;
   background-color: rgba(202, 201, 201, 0.473);
 }
+
 header .HMenu ul li a {
   text-decoration: none;
   position: relative;
@@ -67,22 +84,27 @@ header .HMenu ul li a {
   color: #030350;
   text-transform: uppercase;
 }
+
 header .HMenu ul li a:hover {
   color: #faf6f6;
 }
+
 header .HMenu ul li:hover {
-  box-shadow: inset 300px 0 0 #05058f;
+  -webkit-box-shadow: inset 300px 0 0 #05058f;
+          box-shadow: inset 300px 0 0 #05058f;
 }
 
 main {
   width: 100%;
   height: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#1a1aa8), to(#121258));
   background-image: linear-gradient(#1a1aa8, #121258);
 }
 
 footer {
   width: 100%;
   height: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f5f3f3), to(#cecece));
   background-image: linear-gradient(#f5f3f3, #cecece);
 }
 
@@ -95,6 +117,7 @@ footer {
   background-size: cover;
   background-position: center;
 }
+
 .ICajaPrincipal .CajaTexto {
   position: relative;
   width: 300px;
@@ -103,12 +126,15 @@ footer {
   left: 110px;
   top: 30px;
   background: rgba(119, 118, 118, 0.603);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
+
 .ICajaPrincipal .CajaTexto h2 {
   color: white;
   text-align: center;
 }
+
 .ICajaPrincipal .CajaTexto p {
   color: white;
 }
@@ -121,16 +147,16 @@ footer {
   color: white;
   text-shadow: 3px 2px blue;
 }
+
 .QCajaPrincipal .formulariodecontacto {
   text-align: center;
 }
+
 .QCajaPrincipal .formulariodecontacto .parrafo__cc {
   margin-top: 20px;
 }
-.QCajaPrincipal .formulariodecontacto .titulo__formulario {
-  margin-top: 30px;
-}
-.QCajaPrincipal .formulariodecontacto .titulo__consulta {
+
+.QCajaPrincipal .formulariodecontacto .titulo__formulario, .QCajaPrincipal .formulariodecontacto .titulo__consulta {
   margin-top: 30px;
 }
 
@@ -139,30 +165,39 @@ footer {
 .SCajaPrincipal {
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 .SCajaPrincipal .s__cajaizquierda {
   width: 400px;
   height: 300px;
 }
+
 .SCajaPrincipal .s__cajaizquierda h2 {
   text-align: center;
   padding-top: 50px;
   color: white;
   text-shadow: 2px 2px blue;
 }
+
 .SCajaPrincipal .s__cajaizquierda p {
   text-align: center;
-  justify-content: left;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
   font-size: 1.2em;
   margin-top: 10px;
   color: white;
   text-shadow: 2px 2px blue;
 }
+
 .SCajaPrincipal .s__cajaderecha {
   width: 700px;
   height: 500px;
 }
+
 .SCajaPrincipal .s__cajaderecha .ImgAnimada {
   background-image: url(img/Img1.jpg);
   background-size: 100% 100%;
@@ -170,9 +205,11 @@ footer {
   height: 280px;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   position: relative;
-  box-shadow: 1px 2px 10px 5px white;
+  -webkit-box-shadow: 1px 2px 10px 5px white;
+          box-shadow: 1px 2px 10px 5px white;
   -webkit-animation: slider 25s infinite linear;
           animation: slider 25s infinite linear;
 }
@@ -194,13 +231,30 @@ footer {
     background-image: url(img/Img2.jpg);
   }
 }
+
 /* servicios.html -- FIN */
 /* quienes somos.html -- INICIO */
+.text--tam1 {
+  font-size: 3.5em;
+  text-shadow: 3px 2px blue;
+}
+
+.text--tam2 {
+  font-size: 1.2em;
+  text-shadow: 3px 2px blue;
+}
+
+.text--tam3 {
+  font-size: 2.2em;
+  text-shadow: 3px 2px blue;
+}
+
 .QSTodo {
   font-family: "Poppins", sans-serif;
   color: white;
   text-shadow: 2px 2px blue;
 }
+
 .QSTodo .QSCaja {
   width: 100%;
   height: 80vh;
@@ -208,6 +262,7 @@ footer {
   background-position: center;
   background-size: cover;
 }
+
 .QSTodo .QSCaja2 {
   margin-top: 10vh;
   width: 80vh;
@@ -232,6 +287,7 @@ footer {
     height: 100%;
   }
 }
+
 @media only screen and (min-width: 320px) and (max-width: 435px) {
   .CajaTexto {
     position: relative;
@@ -241,13 +297,14 @@ footer {
     left: 0;
     top: 15px;
     background: rgba(119, 118, 118, 0.603);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   }
-
   .s__cajaderecha {
     margin-top: 30px;
   }
 }
+
 @media only screen and (min-width: 320px) and (max-width: 500px) {
   .QCajaPrincipal {
     width: 300px;
@@ -255,4 +312,5 @@ footer {
     color: white;
     text-shadow: 3px 2px blue;
   }
-}/*# sourceMappingURL=estilos.css.map */
+}
+/*# sourceMappingURL=estilos.css.map */

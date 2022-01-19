@@ -13,16 +13,20 @@ $color1: white;
 $texto-sombra: 2px 2px blue;
 $fuente: 'Poppins', sans-serif;
 
+// Mixing
+@mixin sizes($width, $height) {
+    width: $width;
+    height: $height;
+}
+
 /* Estructura Principal -- INICIO */
 
 body {
-    width: 100%;
-    height: 100%;
+    @include sizes(100%, 100%);
 }
 
 header {
-    width: 100%;
-    height: 28vh;
+    @include sizes(100%, 28vh);
     background-image: linear-gradient(rgb(245, 243, 243), rgb(206, 206, 206));
     border-bottom: 3px solid rgb(26, 124, 6);
 
@@ -32,8 +36,7 @@ header {
     }
 
     .encabezado {
-        width: 100%;
-        height: 70%;
+        @include sizes(100%, 70%);
         display: grid;
         padding: 1px;
         gap: 0.5%;
@@ -42,6 +45,7 @@ header {
     }
 
     .HTLogo {
+        @include sizes(100%, 95%);
         width: 100%;
         height: 95%;
         margin-left: 3px;
@@ -53,6 +57,7 @@ header {
     }
 
     .HMenu {
+        @include sizes(100%, 95%);
         width: 100%;
         height: 95%;
         display: flex;
@@ -92,15 +97,13 @@ header {
 
 
 main {
-    width: 100%;
-    height: 100%;
+    @include sizes(100%, 100%);
     background-image: linear-gradient(rgb(26, 26, 168), rgb(18, 18, 88));
 }
 
 
 footer {
-    width: 100%;
-    height: 100%;
+    @include sizes(100%, 100%);
     background-image: linear-gradient(rgb(245, 243, 243), rgb(206, 206, 206));
 }
 
@@ -110,16 +113,14 @@ footer {
 /* index.html -- INICIO */
 
 .ICajaPrincipal {
-    width: 100%;
-    height: 70vh;
+    @include sizes(100%, 70vh);
     background-image: url(img/img3.jpg);
     background-size: cover;
     background-position: center;
 
     .CajaTexto{
+        @include sizes(300px, 90%);
         position: relative;
-        width: 300px;
-        height: 90%;
         font-size: 90%;
         left: 110px;
         top: 30px;
@@ -142,8 +143,7 @@ footer {
 /* contacto.html -- INICIO */
 
 .QCajaPrincipal {
-    width: 500px;
-    height: 100%;
+    @include sizes(100%, 500px);
     color: $color1;
     text-shadow: 3px 2px blue;
 
@@ -159,7 +159,7 @@ footer {
         }
 
         .titulo__consulta {
-            margin-top: 30px;
+            @extend .titulo__formulario;
         }
     }
 }
@@ -169,8 +169,7 @@ footer {
 /* servicios.html -- INICIO */
 
 .SCajaPrincipal {
-    width: 100%;
-    height: 100%;
+    @include sizes(100%, 100%);
     display: flex;
 
     .s__cajaizquierda {
@@ -178,31 +177,27 @@ footer {
         height: 300px;
 
         h2{
-            text-align: center;
+            @extend .CajaTextoH2;
             padding-top: 50px;
-            color: $color1;
             text-shadow: $texto-sombra;
         }
 
         p{
-            text-align: center;
+            @extend .CajaTextoH2;
             justify-content: left;
             font-size: 1.2em;
             margin-top: 10px;
-            color: $color1;
             text-shadow: $texto-sombra;
         }
     }
 
     .s__cajaderecha {
-        width: 700px;
-        height: 500px;
+        @include sizes(700px, 500px);
 
         .ImgAnimada {
+            @include sizes(75%, 280px);
             background-image: url(img/Img1.jpg);
             background-size: 100% 100%;
-            width: 75%;
-            height: 280px;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
@@ -227,23 +222,35 @@ footer {
 
 /* quienes somos.html -- INICIO */
 
+$Ttexto: (
+    // tamaños de texto -- mapa
+    tam1: 3.5em,
+    tam2: 1.2em,
+    tam3: 2.2em,
+);
+
+@each $tqs, $tam in $Ttexto {
+    .text--#{$tqs} {
+        font-size: $tam;
+        text-shadow: 3px 2px blue;
+    }
+}
+
 .QSTodo {
     font-family: $fuente;
     color: $color1;
     text-shadow: $texto-sombra;
 
     .QSCaja {
-        width: 100%;
-        height: 80vh;
+        @include sizes(100%, 80vh);
         background-image: url(img/img5.jpg);
         background-position: center;
         background-size: cover;
     }
 
     .QSCaja2 {
+        @include sizes(80vh, 40vh);
         margin-top: 10vh;
-        width: 80vh;
-        height: 40vh;
         background-image: url(img/img4.jpg);
         background-size: cover;
         background-position: center;
@@ -264,8 +271,7 @@ footer {
 /* trabajos.html -- FIN */
 @media only screen and (min-width:320px) and (max-width:1200px) {
     header {
-        width: 100%;
-        height: 100%;
+        @include sizes(100%, 100%);
     }
 }
 
@@ -273,9 +279,8 @@ footer {
 @media only screen and (min-width:320px) and (max-width:435px) {
 
     .CajaTexto {
+        @include sizes(300px, 90%);
         position: relative;
-        width: 300px;
-        height: 90%;
         font-size: 90%;
         left: 0;
         top: 15px;
@@ -290,8 +295,7 @@ footer {
 
 @media only screen and (min-width:320px) and (max-width:500px) {
     .QCajaPrincipal {
-        width: 300px;
-        height: 100%;
+        @include sizes(300px, 100%);
         color: $color1;
         text-shadow: 3px 2px blue;
     }
