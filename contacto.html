@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="estilos.css">
     <title>Agro Negocios S.R.L</title>
+    <meta name="keywords" content="Contacto agro negocios S.R.L">
 </head>
+
 <body>
     <header class="container-fluid pt-2 col-12">
         <h2>Agro Negocios S.R.L</h2>
@@ -28,45 +32,47 @@
         <div class="QCajaPrincipal container-fluid">
             <div class="formulariodecontacto col-12 justify-content-center">
                 <h2 class="titulo__cc">Como contactarnos ?</h2>
-                <p class="parrafo__cc">Para contactarnos debe llenar el siguiente formulario. Asegurate de llenar todo los campos y
-                    proporcionarnos un mail y un numero de telefono para que puedamos responder su consulta. Muchas gracias.
+                <p class="parrafo__cc">Para contactarnos debe llenar el siguiente formulario. Asegurate de llenar todo
+                    los campos y
+                    proporcionarnos un mail y un numero de telefono para que puedamos responder su consulta. Muchas
+                    gracias.
                 </p>
-    
+
                 <form action="enviar.php" method="post" enctype="application/x-www-form-urlencoded"></form>
                 <h3 class="titulo__formulario">Formulario</h3>
-    
+
                 <label for="casilla1" class="casilla__nombre">Nombre</label>
                 <input type="text" required> <br>
-    
+
                 <label for="casilla2">Apellido</label>
                 <input type="text" required> <br>
-    
+
                 <label for="casilla3">Mail</label>
                 <input type="email" required> <br>
-    
+
                 <label for="casilla4">Telefono</label>
                 <input type="number" required> <br>
-    
+
                 <label for="casilla5">Fecha</label>
                 <input type="date"> <br>
-    
+
                 <h2 class="titulo__consulta">Consulta</h2>
-    
+
                 <textarea name="areadetexto" id="CajaConsulta" cols="40" rows="15"
                     placeholder="Escribe tu consulta sin ningun compromiso" class="container-fluid"></textarea> <br>
-    
+
                 <label for="casilla6">Desea Recibir noticias a su mail ?</label>
                 <input type="checkbox" name="casilla6"> <br>
-    
+
                 <p>Donde desea recibir nuestras noticias ?</p>
-    
+
                 <form>
                     <select name="Opciones">
                         <option value="Telefono">telefono</option>
                         <option value="Email">mail</option>
                     </select>
                 </form> <br>
-    
+
                 <input type="submit" value="enviar">
                 <input type="reset" value="resetear formulario"> <br>
             </div>
@@ -75,8 +81,15 @@
     <footer>
         <div class="footer foot">© Samuel Arzelan Haro, 2021</div>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
 </body>
+
 </html>
