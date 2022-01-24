@@ -195,7 +195,7 @@ footer {
 
 .ICajaPrincipal {
     @include sizes(100%, 75vh);
-    background-image: url(img/img3.jpg);
+    background-image: url(img/Inicioimg.jpg);
     background-size: cover;
     background-position: center;
 
@@ -303,7 +303,7 @@ $Ttexto: (
 
     .QSCaja {
         @include sizes(100%, 80vh);
-        background-image: url(img/img5.jpg);
+        background-image: url(img/QSimg.jpg);
         background-position: center;
         background-size: cover;
     }
@@ -333,6 +333,11 @@ $Ttexto: (
 
 /* contacto.html -- INICIO */
 
+.ContactoMain{
+    background-image: url(img/ImgContacto.jpg);
+    background-position: center;
+    background-size: cover;
+}
 .cajaContacto{
     padding-top: 50px;
     padding-bottom: 50px;
@@ -371,7 +376,7 @@ $Ttexto: (
 
                 h3{
                     font-weight: 500;
-                    color: rgb(18, 18, 88);
+                    color: rgb(181, 181, 184);
                 }
             }
             
