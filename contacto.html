@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/e3093c9ae7.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="estilos.css">
@@ -17,7 +18,7 @@
         <h2>Agro Negocios S.R.L</h2>
         <div class="encabezado">
             <div class="HTLogo"></div>
-            <div class="HMenu container d-flex justify-content-center">
+            <div class="HMenu container d-flex justify-content-center align-items-center">
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="quienes somos.html">quienes somos</a></li>
@@ -28,7 +29,7 @@
             </div>
         </div>
     </header>
-    <main>
+    <!-- <main>
         <div class="QCajaPrincipal container-fluid">
             <div class="formulariodecontacto col-12 justify-content-center">
                 <h2 class="titulo__cc">Como contactarnos ?</h2>
@@ -77,9 +78,74 @@
                 <input type="reset" value="resetear formulario"> <br>
             </div>
         </div>
+    </main> -->
+
+    <main>
+        <div class="cajaContacto d-flex container-fluid row">
+            <div class="contenido container">
+                <h2>Como Contactarnos</h2>
+                <p>Para contactarnos debe llenar el siguiente formulario. Asegurate de llenar todo
+                    los campos y proporcionarnos un mail y un numero de telefono para que puedamos responder su
+                    consulta. Muchas gracias.</p>
+            </div>
+            <div class="itemsContacto container col-lg-6 col-md-6 col-sm-12">
+                <div class="contactoInfo"></div>
+                <div class="box">
+                    <div class="Icono"><i class="fas fa-phone"></i></div>
+                    <div class="texto">
+                        <h3>Telefono</h3>
+                        <p>+54 9 387 402-2927</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="Icono"><i class="fas fa-envelope"></i></div>
+                    <div class="texto">
+                        <h3>Correo Electronico</h3>
+                        <p>inghugoarzelan@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contactoFormulario col-lg-6 col-md-6 col-sm-12">
+                <h2>Enviar Mensaje</h2>
+                <div class="inputBox">
+                    <input type="text" name="" required="required">
+                    <span>Nombre Completo</span>
+                </div>
+                <div class="inputBox">
+                    <input type="text" name="" required="required">
+                    <span>Email</span>
+                </div>
+                <div class="inputBox">
+                    <input type="text" name="" required="required">
+                    <span>Telefono</span>
+                </div>
+                <div class="inputBox">
+                    <textarea required="required"></textarea>
+                    <span>Escribe tu Mensaje...</span>
+                </div>
+                <div class="inputBox">
+                    <input type="submit" value="Send">
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
-        <div class="footer foot">© Samuel Arzelan Haro, 2021</div>
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+        <div class="footer foot">
+            <ul class="footerul d-flex justify-content-center">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="quienes somos.html">quienes somos</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="trabajos.html">Trabajos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <p class="text-center">© Samuel Arzelan Haro, 2021</p>
+        </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">

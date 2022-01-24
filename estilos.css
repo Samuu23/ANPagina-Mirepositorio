@@ -3,9 +3,8 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: 'Poppins', sans-serif;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
 }
 
 /* Estructura Principal -- INICIO */
@@ -17,30 +16,25 @@ body {
 header {
   width: 100%;
   height: 28vh;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#f5f3f3), to(#cecece));
   background-image: linear-gradient(#f5f3f3, #cecece);
   border-bottom: 3px solid #1a7c06;
 }
-
 header h2 {
   color: #080880;
   text-shadow: 2px 2px rgba(17, 17, 226, 0.336);
 }
-
 header .encabezado {
   width: 100%;
   height: 70%;
-  display: -ms-grid;
   display: grid;
   padding: 1px;
   gap: 0.5%;
-  -ms-grid-columns: 20% 80%;
-      grid-template-columns: 20% 80%;
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 1fr;
 }
-
 header .HTLogo {
+  width: 100%;
+  height: 95%;
   width: 100%;
   height: 95%;
   margin-left: 3px;
@@ -50,33 +44,26 @@ header .HTLogo {
   background-repeat: no-repeat;
   background-position: center;
 }
-
 header .HMenu {
   width: 100%;
   height: 95%;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  width: 100%;
+  height: 100%;
   display: flex;
 }
-
 header .HMenu ul li {
   display: inline-block;
   font-size: 3vh;
   margin: 5px;
   width: 25vh;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   border-radius: 10px;
   text-align: center;
-  -webkit-box-shadow: inset 0 0 0 0 #05058f;
-          box-shadow: inset 0 0 0 0 #05058f;
-  -webkit-transition: ease-out 0.5s;
+  box-shadow: inset 0 0 0 0 #05058f;
   transition: ease-out 0.5s;
   outline: none;
   background-color: rgba(202, 201, 201, 0.473);
 }
-
 header .HMenu ul li a {
   text-decoration: none;
   position: relative;
@@ -84,132 +71,183 @@ header .HMenu ul li a {
   color: #030350;
   text-transform: uppercase;
 }
-
 header .HMenu ul li a:hover {
   color: #faf6f6;
 }
-
 header .HMenu ul li:hover {
-  -webkit-box-shadow: inset 300px 0 0 #05058f;
-          box-shadow: inset 300px 0 0 #05058f;
+  box-shadow: inset 300px 0 0 #05058f;
 }
 
 main {
   width: 100%;
   height: 100%;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#1a1aa8), to(#121258));
+  min-height: 75vh;
   background-image: linear-gradient(#1a1aa8, #121258);
 }
 
 footer {
   width: 100%;
-  height: 100%;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#f5f3f3), to(#cecece));
+  padding: 10px 5px;
+  position: relative;
+  min-height: 5px;
+  justify-content: center;
+  align-items: center;
   background-image: linear-gradient(#f5f3f3, #cecece);
 }
+footer .footerul {
+  position: relative;
+  margin: 5px 0;
+}
+footer .footerul li {
+  list-style: none;
+}
+footer .footerul li a {
+  color: #030350;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+}
+footer .footerul li a:hover {
+  transform: translate(-10px);
+}
+footer .wave {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background: url(img/wave.png);
+  background-size: 300px 30px;
+}
+footer .wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  -webkit-animation: animatedWave 4s linear infinite;
+          animation: animatedWave 4s linear infinite;
+}
+footer .wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  -webkit-animation: animatedWave_02 4s linear infinite;
+          animation: animatedWave_02 4s linear infinite;
+}
+footer .wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  -webkit-animation: animatedWave 3s linear infinite;
+          animation: animatedWave 3s linear infinite;
+}
+footer .wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  -webkit-animation: animatedWave_02 3s linear infinite;
+          animation: animatedWave_02 3s linear infinite;
+}
 
+@-webkit-keyframes animatedWave {
+  0% {
+    background-position-x: 300px;
+  }
+  100% {
+    background-position-x: 0px;
+  }
+}
+
+@keyframes animatedWave {
+  0% {
+    background-position-x: 300px;
+  }
+  100% {
+    background-position-x: 0px;
+  }
+}
+@-webkit-keyframes animatedWave_02 {
+  0% {
+    background-position-x: 0px;
+  }
+  100% {
+    background-position-x: 300px;
+  }
+}
+@keyframes animatedWave_02 {
+  0% {
+    background-position-x: 0px;
+  }
+  100% {
+    background-position-x: 300px;
+  }
+}
 /* Estructura Principal -- FIN */
 /* index.html -- INICIO */
 .ICajaPrincipal {
   width: 100%;
-  height: 70vh;
+  height: 75vh;
   background-image: url(img/img3.jpg);
   background-size: cover;
   background-position: center;
 }
-
 .ICajaPrincipal .CajaTexto {
-  position: relative;
   width: 300px;
   height: 90%;
+  position: relative;
   font-size: 90%;
   left: 110px;
   top: 30px;
   background: rgba(119, 118, 118, 0.603);
-  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
-
-.ICajaPrincipal .CajaTexto h2 {
+.ICajaPrincipal .CajaTexto .CajaTextoH2 {
   color: white;
   text-align: center;
 }
-
 .ICajaPrincipal .CajaTexto p {
   color: white;
 }
 
 /* index.html -- FIN */
-/* contacto.html -- INICIO */
-.QCajaPrincipal {
-  width: 500px;
-  height: 100%;
-  color: white;
-  text-shadow: 3px 2px blue;
-}
-
-.QCajaPrincipal .formulariodecontacto {
-  text-align: center;
-}
-
-.QCajaPrincipal .formulariodecontacto .parrafo__cc {
-  margin-top: 20px;
-}
-
-.QCajaPrincipal .formulariodecontacto .titulo__formulario, .QCajaPrincipal .formulariodecontacto .titulo__consulta {
-  margin-top: 30px;
-}
-
-/* contacto.html -- FIN */
 /* servicios.html -- INICIO */
 .SCajaPrincipal {
   width: 100%;
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .SCajaPrincipal .s__cajaizquierda {
   width: 400px;
   height: 300px;
 }
-
 .SCajaPrincipal .s__cajaizquierda h2 {
+  color: white;
   text-align: center;
   padding-top: 50px;
-  color: white;
-  text-shadow: 2px 2px blue;
+  text-shadow: 2px 2px #0b0bb3;
 }
-
 .SCajaPrincipal .s__cajaizquierda p {
+  color: white;
   text-align: center;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
+  justify-content: left;
   font-size: 1.2em;
   margin-top: 10px;
-  color: white;
-  text-shadow: 2px 2px blue;
+  text-shadow: 2px 2px #0b0bb3;
 }
-
 .SCajaPrincipal .s__cajaderecha {
   width: 700px;
   height: 500px;
 }
-
 .SCajaPrincipal .s__cajaderecha .ImgAnimada {
-  background-image: url(img/Img1.jpg);
-  background-size: 100% 100%;
   width: 75%;
   height: 280px;
+  background-image: url(img/Img1.jpg);
+  background-size: 100% 100%;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   position: relative;
-  -webkit-box-shadow: 1px 2px 10px 5px white;
-          box-shadow: 1px 2px 10px 5px white;
+  box-shadow: 1px 2px 10px 5px white;
   -webkit-animation: slider 25s infinite linear;
           animation: slider 25s infinite linear;
 }
@@ -231,7 +269,6 @@ footer {
     background-image: url(img/Img2.jpg);
   }
 }
-
 /* servicios.html -- FIN */
 /* quienes somos.html -- INICIO */
 .text--tam1 {
@@ -252,9 +289,9 @@ footer {
 .QSTodo {
   font-family: "Poppins", sans-serif;
   color: white;
-  text-shadow: 2px 2px blue;
+  text-shadow: 2px 2px #0b0bb3;
+  padding-bottom: 50px;
 }
-
 .QSTodo .QSCaja {
   width: 100%;
   height: 80vh;
@@ -262,11 +299,10 @@ footer {
   background-position: center;
   background-size: cover;
 }
-
 .QSTodo .QSCaja2 {
-  margin-top: 10vh;
   width: 80vh;
   height: 40vh;
+  margin-top: 10vh;
   background-image: url(img/img4.jpg);
   background-size: cover;
   background-position: center;
@@ -277,34 +313,140 @@ footer {
 .TcajaTexto {
   font-family: "Poppins", sans-serif;
   color: white;
-  text-shadow: 2px 2px blue;
+  padding-bottom: 50px;
 }
 
 /* trabajos.html -- FIN */
+/* contacto.html -- INICIO */
+.cajaContacto {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.cajaContacto .contenido {
+  text-align: center;
+  color: white;
+}
+.cajaContacto .itemsContacto {
+  padding-top: 50px;
+}
+.cajaContacto .itemsContacto .box {
+  position: relative;
+  padding: 20px 0;
+  display: flex;
+}
+.cajaContacto .itemsContacto .box .Icono {
+  min-width: 60px;
+  height: 60px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 22px;
+}
+.cajaContacto .itemsContacto .box .texto {
+  display: flex;
+  margin-left: 20px;
+  font-size: 16px;
+  flex-direction: column;
+  color: white;
+}
+.cajaContacto .itemsContacto .box .texto h3 {
+  font-weight: 500;
+  color: #121258;
+}
+.cajaContacto .contactoFormulario {
+  width: 40%;
+  height: 60%;
+  padding: 40px;
+  background: #fff;
+}
+.cajaContacto .contactoFormulario h2 {
+  font-size: 30px;
+  color: #333;
+  font-weight: 500;
+}
+.cajaContacto .contactoFormulario .inputBox {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+.cajaContacto .contactoFormulario .inputBox input, .cajaContacto .contactoFormulario .inputBox textarea {
+  width: 100%;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid #333;
+  outline: none;
+  resize: none;
+}
+.cajaContacto .contactoFormulario .inputBox input:focus ~ span {
+  color: #211ee9;
+  font-size: 12px;
+  transform: translateY(-20px);
+}
+.cajaContacto .contactoFormulario .inputBox input:valid ~ span {
+  color: #211ee9;
+  font-size: 12px;
+  transform: translateY(-20px);
+}
+.cajaContacto .contactoFormulario .inputBox textarea:focus ~ span {
+  color: #211ee9;
+  font-size: 12px;
+  transform: translateY(-20px);
+}
+.cajaContacto .contactoFormulario .inputBox textarea:focus ~ span {
+  color: #211ee9;
+  font-size: 12px;
+  transform: translateY(-20px);
+}
+.cajaContacto .contactoFormulario .inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  pointer-events: none;
+  transition: 0.5s;
+  color: #666;
+}
+.cajaContacto .contactoFormulario .inputBox input[type=submit] {
+  width: 100px;
+  background: #2000d4;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+}
+.cajaContacto .contactoFormulario {
+  padding-top: 50px;
+}
+
+/* contacto.html -- FIN */
 @media only screen and (min-width: 320px) and (max-width: 1200px) {
   header {
     width: 100%;
     height: 100%;
   }
 }
-
 @media only screen and (min-width: 320px) and (max-width: 435px) {
   .CajaTexto {
-    position: relative;
     width: 300px;
     height: 90%;
+    position: relative;
     font-size: 90%;
     left: 0;
     top: 15px;
     background: rgba(119, 118, 118, 0.603);
-    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   }
+
   .s__cajaderecha {
     margin-top: 30px;
   }
 }
-
 @media only screen and (min-width: 320px) and (max-width: 500px) {
   .QCajaPrincipal {
     width: 300px;
@@ -312,5 +454,4 @@ footer {
     color: white;
     text-shadow: 3px 2px blue;
   }
-}
-/*# sourceMappingURL=estilos.css.map */
+}/*# sourceMappingURL=estilos.css.map */

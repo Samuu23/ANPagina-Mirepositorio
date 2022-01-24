@@ -10,7 +10,7 @@
 
 // Variables
 $color1: white;
-$texto-sombra: 2px 2px blue;
+$texto-sombra: 2px 2px rgb(11, 11, 179);
 $fuente: 'Poppins', sans-serif;
 
 // Mixing
@@ -59,7 +59,7 @@ header {
     .HMenu {
         @include sizes(100%, 95%);
         width: 100%;
-        height: 95%;
+        height: 100%;
         display: flex;
 
         ul {
@@ -98,13 +98,94 @@ header {
 
 main {
     @include sizes(100%, 100%);
+    min-height: 75vh;    
     background-image: linear-gradient(rgb(26, 26, 168), rgb(18, 18, 88));
 }
 
 
 footer {
-    @include sizes(100%, 100%);
+    width: 100%;
+    padding: 10px 5px;
+    position: relative;
+    min-height: 5px;
+    justify-content: center;
+    align-items: center;
     background-image: linear-gradient(rgb(245, 243, 243), rgb(206, 206, 206));
+
+    .footerul{
+        position: relative;
+        margin: 5px 0;
+
+        li{
+            list-style: none;
+
+            a{
+                color: rgb(3, 3, 80);
+                margin: 0 10px;
+                display: inline-block;
+                transition: 0.5s;
+                text-decoration: none;
+            }
+            a:hover{
+                transform: translate(-10px);
+            }    
+        }
+
+    }
+    .wave{
+        position: absolute;
+        top: -30px;
+        left: 0;
+        width: 100%;
+        height: 30px;
+        background:  url(img/wave.png);
+        background-size: 300px 30px;
+    }
+    .wave#wave1{
+        z-index: 1000;
+        opacity: 1;
+        bottom: 0;
+        animation: animatedWave 4s linear infinite;
+    }
+    .wave#wave2{
+        z-index: 999;
+        opacity: 0.5;
+        bottom: 10px;
+        animation: animatedWave_02 4s linear infinite;
+    }
+    .wave#wave3{
+        z-index: 1000;
+        opacity: 0.2;
+        bottom: 15px;
+        animation: animatedWave 3s linear infinite;
+    }
+    .wave#wave4{
+        z-index: 999;
+        opacity: 0.7;
+        bottom: 20px;
+        animation: animatedWave_02 3s linear infinite;
+    }
+}
+@keyframes animatedWave{
+    0%
+    {
+        background-position-x: 300px;
+    }
+    100%
+    {
+        background-position-x: 0px;
+    }
+}
+
+@keyframes animatedWave_02{
+    0%
+    {
+        background-position-x: 0px;
+    }
+    100%
+    {
+        background-position-x: 300px;
+    }
 }
 
 /* Estructura Principal -- FIN */
@@ -113,7 +194,7 @@ footer {
 /* index.html -- INICIO */
 
 .ICajaPrincipal {
-    @include sizes(100%, 70vh);
+    @include sizes(100%, 75vh);
     background-image: url(img/img3.jpg);
     background-size: cover;
     background-position: center;
@@ -127,7 +208,7 @@ footer {
         background: rgba(119, 118, 118, 0.603);
         box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
 
-        h2{
+        .CajaTextoH2{
             color: $color1;
             text-align: center;
         }
@@ -140,31 +221,7 @@ footer {
 
 /* index.html -- FIN */
 
-/* contacto.html -- INICIO */
 
-.QCajaPrincipal {
-    @include sizes(100%, 500px);
-    color: $color1;
-    text-shadow: 3px 2px blue;
-
-    .formulariodecontacto {
-        text-align: center;
-
-        .parrafo__cc {
-            margin-top: 20px;
-        }
-
-        .titulo__formulario {
-            margin-top: 30px;
-        }
-
-        .titulo__consulta {
-            @extend .titulo__formulario;
-        }
-    }
-}
-
-/* contacto.html -- FIN */
 
 /* servicios.html -- INICIO */
 
@@ -177,13 +234,15 @@ footer {
         height: 300px;
 
         h2{
-            @extend .CajaTextoH2;
+            color: $color1;
+            text-align: center;
             padding-top: 50px;
             text-shadow: $texto-sombra;
         }
 
         p{
-            @extend .CajaTextoH2;
+            color: $color1;
+            text-align: center;
             justify-content: left;
             font-size: 1.2em;
             margin-top: 10px;
@@ -240,6 +299,7 @@ $Ttexto: (
     font-family: $fuente;
     color: $color1;
     text-shadow: $texto-sombra;
+    padding-bottom: 50px;
 
     .QSCaja {
         @include sizes(100%, 80vh);
@@ -262,13 +322,137 @@ $Ttexto: (
 
 
 /* trabajos.html -- INICIO */
+
 .TcajaTexto {
     font-family: $fuente;
     color: $color1;
-    text-shadow: $texto-sombra;
+    padding-bottom: 50px;
 }
 
 /* trabajos.html -- FIN */
+
+/* contacto.html -- INICIO */
+
+.cajaContacto{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    
+
+    .contenido{
+        text-align: center;
+        color: $color1;
+    }
+
+    .itemsContacto{
+        padding-top: 50px;
+
+        .box{
+            position: relative;
+            padding: 20px 0;
+            display: flex;
+
+            .Icono{
+                min-width: 60px;
+                height: 60px;
+                background: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                font-size: 22px;
+            }
+
+            .texto{
+                display: flex;
+                margin-left: 20px;
+                font-size: 16px;
+                flex-direction: column;
+                color: $color1;
+
+                h3{
+                    font-weight: 500;
+                    color: rgb(18, 18, 88);
+                }
+            }
+            
+        }
+
+    }
+    .contactoFormulario{
+        width: 40%;
+        height: 60%;
+        padding: 40px;
+        background: #fff;
+
+        h2{
+            font-size: 30px;
+            color: #333;
+            font-weight: 500;
+        }
+        .inputBox{
+            position: relative;
+            width: 100%;
+            margin-top: 10px;
+
+            input, textarea{
+                width: 100%;
+                padding: 5px 0;
+                font-size: 16px;
+                margin: 10px 0;
+                border: none;
+                border-bottom: 2px solid #333;
+                outline: none;
+                resize: none;
+            }
+
+            input:focus ~ span{
+                color: #211ee9;
+                font-size: 12px;
+                transform: translateY(-20px);
+            }
+            input:valid ~ span{
+                color: #211ee9;
+                font-size: 12px;
+                transform: translateY(-20px);
+            }
+            textarea:focus ~ span{
+            color: #211ee9;
+            font-size: 12px;
+            transform: translateY(-20px);
+            }
+            textarea:focus ~ span{
+            color: #211ee9;
+            font-size: 12px;
+            transform: translateY(-20px);
+            }
+            span{
+                position: absolute;
+                left: 0;
+                padding: 5px 0;
+                font-size: 16px;
+                margin: 10px 0;
+                pointer-events: none;
+                transition: 0.5s;
+                color: #666;
+            }
+            input[type="submit"]{
+                width: 100px;
+                background: #2000d4;
+                color: #fff;
+                border: none;
+                cursor: pointer;
+                padding: 10px;
+                font-size: 18px;
+            }
+        }
+    }
+
+    .contactoFormulario{
+        padding-top: 50px;
+    }
+
+}
+/* contacto.html -- FIN */
 @media only screen and (min-width:320px) and (max-width:1200px) {
     header {
         @include sizes(100%, 100%);
