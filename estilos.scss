@@ -57,7 +57,7 @@ header {
     }
 
     .HMenu {
-        @include sizes(100%, 95%);
+        @include sizes(100%, 100%);
         width: 100%;
         height: 100%;
         display: flex;
