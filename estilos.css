@@ -52,7 +52,7 @@ header .HMenu {
   display: flex;
 }
 header .HMenu ul {
-  width: 80%;
+  width: 100%;
 }
 header .HMenu ul li {
   display: inline-block;
