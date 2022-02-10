@@ -51,6 +51,9 @@ header .HMenu {
   height: 100%;
   display: flex;
 }
+header .HMenu ul {
+  width: 80%;
+}
 header .HMenu ul li {
   display: inline-block;
   font-size: 3vh;
